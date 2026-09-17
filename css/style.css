@@ -1,0 +1,611 @@
+/* Font Files */
+
+@font-face {
+  font-family: mainFont;
+  src: local("mainFont"), url("mainFont.ttf");
+}
+@font-face {
+  font-family: mainBold;
+  src: local("mainBold"), url("mainBold.ttf");
+}
+
+/* main css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body , html{
+  font-family: mainFont, sans-serif;
+}
+.main_bold{
+  font-family: mainBold, sans-serif;
+  font-weight: bold;
+}
+a{
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+li{
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+input, button{
+  border: none;
+  outline: none;
+}
+
+
+
+/* error form style */ 
+
+#error {
+  position: relative;
+  top: -5px;
+  color: red;
+  font-size: 14px;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0 5px 3px;
+  background: #fcfefe;
+  border-radius: 3px;
+  border: 1px solid red;
+  line-height: 1.2;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#error.active {
+  opacity: 1;
+}
+
+
+/* button */
+
+.btn_img {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px 0 10px;
+}
+
+.div_btn{
+  text-align: center;
+}
+.div_btn .btn{
+  font-family: mainFont, sans-serif;
+  font-size: 28px;
+  padding: 12px 38px 12px;
+  color: #fff;
+  background: linear-gradient(#000, #0a0a0a);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #5858586b;
+  cursor: pointer;
+}
+
+
+@media (min-width:576px){
+  .btn_img{
+    width: 280px;
+  }
+}
+
+
+/* ================== */
+/* Start hero Section */
+.hero{
+  background: #fff;
+}
+.hero .content{
+  padding-top: 10px;
+  background: url(../images/bg-hero.webp);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+  .hero .text-hero{
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.flex{
+  display: flex;
+}
+.hero{
+  width: 50%;
+}
+  .hero ul{
+    padding-top: 1vw;
+  }
+.hero ul li{
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+.hero ul li img{
+  width: 10vw;
+}
+.hero ul li.four{
+  margin-bottom:1.5vw;
+}
+.hero ul .border{
+  height: 2vw;
+}
+
+
+.hero .content{
+  padding-bottom: 0px;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+
+      .hero .top_img {
+        margin-top: -1vw;
+    }
+}
+@media (min-width:1400px){
+   .hero .top_img {
+        margin-top: -1.5vw;
+    }
+
+
+}
+
+/* End hero Section */
+/* ================== */
+
+
+/* ================== */
+/* Start results Section */
+
+.results{
+  background: url(../images/bg-results.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding-top: 7vw;
+}
+.results .text_results{
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+/* Swiper Slider Styles */
+.container_results{
+  position: relative;
+  width: 100%;
+}
+.results-swiper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.results-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.results-swiper .swiper-button-next,
+.results-swiper .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #DA2E2C 0%, rgb(255, 39, 23) 100%);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(241, 90, 36, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.results-swiper .swiper-button-prev{
+  right: auto;
+}
+.results-swiper .swiper-button-next{
+  left: 0px;
+}
+.results-swiper .swiper-button-next:after,
+.results-swiper .swiper-button-prev:after {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.results-swiper .swiper-button-next:hover,
+.results-swiper .swiper-button-prev:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(241, 90, 36, 0.8), inset 0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+  .results .top_sec h3{
+    font-size: 10vw;
+  }
+
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.results{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 0;
+  padding-top: 4vw
+}
+
+.results-swiper{
+  margin-right: 1.5vw;
+  width: 80%;
+  margin: 0 auto;
+}
+
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+.results{
+  padding-top: 2vw;
+}
+}
+
+@media (min-width:1500px){
+
+}
+/* End results Section */
+/* ================== */
+
+
+/* ================== */
+/* Start testm Section */
+
+.testm{
+  position: relative;
+  background: #DD2214;
+  background-image: url(../images/bg-testm.webp);
+  background-size: cover;
+  background-position: bottom center;
+  text-align: center;
+    position: relative;
+    padding-top: 4vw;
+}
+
+.testm .h2{
+  width: 60%;
+  margin: 3vw auto;
+}
+
+.testm .imp_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  padding: 3vw 0 4vw;
+}
+.testm .imp_div img{
+  width: 10%;
+}
+
+.testm .imp_div p{
+color: #000;
+font-size: 3.5vw;
+line-height: 1.5;
+}
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .flex.flex-reverse{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .testm{
+    padding-top: 2vw;
+    width: 100%;
+    padding-bottom: 3vw;
+  }
+  .testm .h2{
+    width: 50%;
+    margin: 0 auto;
+  }
+    .testm .img_testm{
+      width: 50%;
+      margin: 0 auto;
+    }
+    .testm .imp_div p{
+      font-size: 2vw;
+    }
+    .testm .imp_div img{
+      width: 6%;
+    }
+    .testm .imp_div p{
+      padding-bottom: 0;
+    }
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+/* End testm Section */
+/* ================== */
+
+
+
+/* ================== */
+/* Start form_section Section */
+
+
+/* top form section */
+
+
+/* form */
+
+.form_section .container_form{
+  background:#000;
+}
+
+.form_section .sm-p {
+  font-size: 2.4vw;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  padding: 7px 0;
+}
+
+
+.form_section form{
+  background: linear-gradient(to left,#DF2A22,#DC2922);
+  text-align: center;
+  width: 95%;
+  margin: 0 auto ;
+  border-radius: 18px;
+  box-shadow: 5px 5px 8px #00000027;
+  padding-bottom: 15px;
+}
+.form_section .top_form{
+  padding: 12px 0;
+}
+.form_section .top_form p{
+  font-size: 5vw;
+  line-height: 1.3;
+  color: #fbfdfd;
+}
+.form_section form .input_div{
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  }
+
+.form_section form .input_div svg{
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.form_section form .input_div .icon_Phone{
+  transform:translateY(-50%) scaleX(-1);
+}
+
+
+.form_section form input{
+  width: 100%;
+  padding: 15px 40px 15px 10px;
+  font-size: 18px;
+  box-shadow: 5px 5px 8px #00000031;
+  text-align: right;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in;
+}
+.form_section form input:focus {
+  border-color: #68E03E;
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.form_section .delvery_text p{
+  font-size: 6vw;
+}
+.form_section .sm-p{
+  font-size: 2.5vw;
+}
+.form_section .top_form p{
+  font-size: 4.8vw;
+}
+.form_section form .input_div{
+  width: 90%;
+}
+}
+
+
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.form_section{
+  display: flex;
+}
+.form_section .price{
+  width: 50%;
+}
+
+.form_section .container_form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_section form{
+  width: 90%;
+}
+.form_section .delvery_text p{
+  font-size: 30px;
+}
+.form_section .sm-p{
+  font-size: 13.5px;
+}
+.form_section .top_form p{
+  font-size: 24px;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+.form_section form{
+  width: 80%;
+  padding: 25px 20px 30px;
+  width: max-content;
+  min-width: 600px;
+}
+
+
+}
+
+/* End form_section Section */
+/* ================== */
+
+
+
+
+/* ================== */
+/* Start footer Section */
+
+.footer{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.footer .boxs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 94%;
+  margin: 0 auto;
+  
+}
+
+.footer .boxs .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 33.3%;
+}
+
+.footer .boxs .box img {
+  height: 24px;
+  width: auto;
+}
+
+.footer .boxs .box p {
+  font-size: 2.2vw;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.footer .boxs .box img{
+  height: 28px;
+}
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .footer{
+    padding-top: 4vw;
+  }
+  .footer .boxs{
+    width: 98%;
+  }
+  .footer .boxs .box{
+    gap: 7px;
+  }
+.footer .boxs .box img{
+  height: 30px;
+}
+.footer .boxs .box p{
+  font-size: 1.25vw;
+}
+.footer.bot_footer{
+  display: flex;
+  background: #121a22;
+}
+@media (min-width:1300px){
+.footer .boxs .box img{
+  height: 40px;
+}
+}
+}
+
+/* End footer Section */
+/* ================== */
