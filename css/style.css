@@ -285,7 +285,7 @@ input, button{
   flex-direction: column;
   justify-content: space-between;
   padding: 0 0 0;
-  padding-top: 4vw
+  padding-top: 1vw
 }
 
 .results-swiper{
@@ -294,12 +294,16 @@ input, button{
   margin: 0 auto;
 }
 
+.results .text_results{
+  width: 50%;
+}
+
 }
 
 /* ==========  xl ≥ 1200px  ========== */
 @media (min-width:1200px){
 .results{
-  padding-top: 2vw;
+  padding-top: 1vw;
 }
 }
 
@@ -365,8 +369,8 @@ line-height: 1.5;
     padding-bottom: 3vw;
   }
   .testm .h2{
-    width: 50%;
-    margin: 0 auto;
+    width: 35%;
+    margin: 0 auto 3vw;
   }
     .testm .img_testm{
       width: 50%;
